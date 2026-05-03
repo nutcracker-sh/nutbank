@@ -35,22 +35,25 @@ class DashboardActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.tvRoutingNumber).text = Secrets.ROUTING_NUMBER
         findViewById<TextView>(R.id.tvAccountToken).text = Secrets.ACCOUNT_TOKEN
         findViewById<TextView>(R.id.tvAesKey).text = Secrets.AES_KEY
+        findViewById<TextView>(R.id.tvAesIv).text = Secrets.AES_IV
 
         // ── Cloud Services ──────────────────────────────────────
         findViewById<TextView>(R.id.tvAwsAccessKey).text = Secrets.AWS_ACCESS_KEY
-        findViewById<TextView>(R.id.tvAwsSecretKey).text = Secrets.AWS_SECRET_KEY.take(12) + "..."
+        findViewById<TextView>(R.id.tvAwsSecretKey).text = Secrets.AWS_SECRET_KEY
         findViewById<TextView>(R.id.tvS3Bucket).text = "s3://${Secrets.AWS_S3_BUCKET}"
         findViewById<TextView>(R.id.tvFirebaseKey).text = Secrets.FIREBASE_API_KEY
         findViewById<TextView>(R.id.tvFirebaseDbUrl).text = Secrets.FIREBASE_DB_URL
+        findViewById<TextView>(R.id.tvFirebaseProject).text = Secrets.FIREBASE_PROJECT
 
         // ── Payment Gateway ─────────────────────────────────────
         findViewById<TextView>(R.id.tvStripeKey).text = Secrets.STRIPE_SECRET_KEY
         findViewById<TextView>(R.id.tvStripeWebhook).text = Secrets.STRIPE_WEBHOOK_SECRET
 
         // ── Communications ──────────────────────────────────────
-        findViewById<TextView>(R.id.tvSendGridKey).text = Secrets.SENDGRID_API_KEY.take(20) + "..."
+        findViewById<TextView>(R.id.tvSendGridKey).text = Secrets.SENDGRID_API_KEY
         findViewById<TextView>(R.id.tvTwilioSid).text = Secrets.TWILIO_ACCOUNT_SID
         findViewById<TextView>(R.id.tvTwilioToken).text = Secrets.TWILIO_AUTH_TOKEN
+        findViewById<TextView>(R.id.tvTwilioPhone).text = Secrets.TWILIO_PHONE_FROM
 
         // ── Session & API ───────────────────────────────────────
         findViewById<TextView>(R.id.tvApiUrl).text = Secrets.API_BASE_URL
@@ -61,6 +64,8 @@ class DashboardActivity : AppCompatActivity() {
         val prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
         val sessionToken = prefs.getString(KEY_TOKEN, "No session found")
         findViewById<TextView>(R.id.tvSessionToken).text = sessionToken
+        findViewById<TextView>(R.id.tvAdminUsername).text = Secrets.ADMIN_USERNAME
+        findViewById<TextView>(R.id.tvAdminPassword).text = Secrets.ADMIN_PASSWORD
 
         // ── Database ────────────────────────────────────────────
         findViewById<TextView>(R.id.tvDbHost).text = Secrets.DB_HOST
@@ -69,7 +74,7 @@ class DashboardActivity : AppCompatActivity() {
 
         // ── Integrations ────────────────────────────────────────
         findViewById<TextView>(R.id.tvGoogleOAuth).text = Secrets.GOOGLE_OAUTH_CLIENT_ID
-        findViewById<TextView>(R.id.tvMapboxToken).text = Secrets.MAPBOX_TOKEN.take(30) + "..."
+        findViewById<TextView>(R.id.tvMapboxToken).text = Secrets.MAPBOX_TOKEN
         findViewById<TextView>(R.id.tvSentryDsn).text = Secrets.SENTRY_DSN
 
         // ── VULNERABILITY: Log sensitive data to Logcat ──────────

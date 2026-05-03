@@ -177,10 +177,18 @@
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal" android:layout_marginBottom="10dp">
                 <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_weight="1" android:text="AES Key" android:textColor="#556688" android:textSize="12sp"/>
                 <TextView android:id="@+id/tvAesKey" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="12sp"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="AES IV" android:textColor="#556688" android:textSize="12sp"/>
+                <TextView android:id="@+id/tvAesIv" android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="12sp"/>
             </LinearLayout>
         </LinearLayout>
@@ -236,11 +244,19 @@
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal" android:layout_marginBottom="10dp">
                 <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_weight="1" android:text="Firebase DB URL" android:textColor="#556688" android:textSize="12sp"/>
                 <TextView android:id="@+id/tvFirebaseDbUrl" android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:textColor="#ffffff" android:textSize="11sp"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Firebase Project" android:textColor="#556688" android:textSize="12sp"/>
+                <TextView android:id="@+id/tvFirebaseProject" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textColor="#ffffff" android:textSize="12sp"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -314,11 +330,19 @@
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal" android:layout_marginBottom="10dp">
                 <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_weight="1" android:text="Twilio Auth Token" android:textColor="#556688" android:textSize="12sp"/>
                 <TextView android:id="@+id/tvTwilioToken" android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="11sp"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Twilio Phone" android:textColor="#556688" android:textSize="12sp"/>
+                <TextView android:id="@+id/tvTwilioPhone" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="12sp"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -365,11 +389,27 @@
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal" android:layout_marginBottom="10dp">
                 <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_weight="1" android:text="Session Token" android:textColor="#556688" android:textSize="12sp"/>
                 <TextView android:id="@+id/tvSessionToken" android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:textColor="#ffcc00" android:textSize="10sp"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="10dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Admin Username" android:textColor="#556688" android:textSize="12sp"/>
+                <TextView android:id="@+id/tvAdminUsername" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="12sp"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Admin Password" android:textColor="#556688" android:textSize="12sp"/>
+                <TextView android:id="@+id/tvAdminPassword" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="12sp"/>
             </LinearLayout>
         </LinearLayout>
 
