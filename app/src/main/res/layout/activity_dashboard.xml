@@ -11,18 +11,6 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- Warning banner -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#2a1a1a"
-            android:text="⚠ VULNERABLE APP — Secrets are exposed intentionally for security research."
-            android:textColor="#ff6b6b"
-            android:textSize="10sp"
-            android:gravity="center"
-            android:padding="8dp"
-            android:layout_marginBottom="20dp"/>
-
         <!-- Header -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -70,7 +58,7 @@
             android:orientation="vertical"
             android:background="#111827"
             android:padding="20dp"
-            android:layout_marginBottom="12dp">
+            android:layout_marginBottom="16dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -81,6 +69,7 @@
                 android:layout_marginBottom="8dp"/>
 
             <TextView
+                android:id="@+id/tvBalance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="$24,891.00"
@@ -134,11 +123,11 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- ═══ Account Details Card ═══ -->
+        <!-- ═══ Quick Actions ═══ -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="🏦 Account Details"
+            android:text="Quick Actions"
             android:textColor="#8899bb"
             android:textSize="13sp"
             android:textStyle="bold"
@@ -147,57 +136,78 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="#111827"
-            android:padding="16dp"
-            android:layout_marginBottom="12dp">
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Account No." android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvAccountNumber" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ffffff" android:textSize="12sp"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#111827"
+                android:padding="16dp"
+                android:layout_marginRight="6dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="💸" android:textSize="24sp" android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Transfer" android:textColor="#ffffff" android:textSize="11sp"/>
             </LinearLayout>
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Routing No." android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvRoutingNumber" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ffffff" android:textSize="12sp"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#111827"
+                android:padding="16dp"
+                android:layout_marginRight="6dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="💳" android:textSize="24sp" android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Pay" android:textColor="#ffffff" android:textSize="11sp"/>
             </LinearLayout>
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Account Token" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvAccountToken" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="12sp"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#111827"
+                android:padding="16dp"
+                android:layout_marginRight="6dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📱" android:textSize="24sp" android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Top Up" android:textColor="#ffffff" android:textSize="11sp"/>
             </LinearLayout>
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="AES Key" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvAesKey" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="12sp"/>
-            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#111827"
+                android:padding="16dp">
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="AES IV" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvAesIv" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="12sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📊" android:textSize="24sp" android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="More" android:textColor="#ffffff" android:textSize="11sp"/>
             </LinearLayout>
         </LinearLayout>
 
-        <!-- ═══ Cloud Services Card ═══ -->
+        <!-- ═══ My Card ═══ -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="☁️ Cloud Services"
+            android:text="💳 My Card"
             android:textColor="#8899bb"
             android:textSize="13sp"
             android:textStyle="bold"
@@ -207,295 +217,55 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#111827"
-            android:padding="16dp"
-            android:layout_marginBottom="12dp">
+            android:background="#1a1a3e"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp">
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="AWS Access Key" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvAwsAccessKey" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="12sp"/>
-            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NutBank"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp"/>
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="AWS Secret Key" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvAwsSecretKey" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="11sp"/>
-            </LinearLayout>
+            <TextView
+                android:id="@+id/tvCardNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="•••• •••• •••• 3201"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="16dp"/>
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="S3 Bucket" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvS3Bucket" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ffffff" android:textSize="12sp"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Firebase Key" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvFirebaseKey" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="11sp"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Firebase DB URL" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvFirebaseDbUrl" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ffffff" android:textSize="11sp"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Firebase Project" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvFirebaseProject" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ffffff" android:textSize="12sp"/>
-            </LinearLayout>
-        </LinearLayout>
 
-        <!-- ═══ Payment Gateway Card ═══ -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="💳 Payment Gateway"
-            android:textColor="#8899bb"
-            android:textSize="13sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="CARD HOLDER" android:textColor="#556688" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tvCardHolder"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="ADMIN USER" android:textColor="#ffffff" android:textSize="12sp"/>
+                </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="#111827"
-            android:padding="16dp"
-            android:layout_marginBottom="12dp">
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Stripe Secret Key" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvStripeKey" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="11sp"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Stripe Webhook Secret" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvStripeWebhook" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="11sp"/>
-            </LinearLayout>
-        </LinearLayout>
-
-        <!-- ═══ Communications Card ═══ -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="📧 Communications"
-            android:textColor="#8899bb"
-            android:textSize="13sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="#111827"
-            android:padding="16dp"
-            android:layout_marginBottom="12dp">
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="SendGrid API Key" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvSendGridKey" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="11sp"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Twilio Account SID" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvTwilioSid" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="11sp"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Twilio Auth Token" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvTwilioToken" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="11sp"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Twilio Phone" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvTwilioPhone" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="12sp"/>
-            </LinearLayout>
-        </LinearLayout>
-
-        <!-- ═══ Session & API Card ═══ -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="🔑 Session &amp; API"
-            android:textColor="#8899bb"
-            android:textSize="13sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="#111827"
-            android:padding="16dp"
-            android:layout_marginBottom="12dp">
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="API Base URL" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvApiUrl" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ffffff" android:textSize="11sp"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="API Key" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvApiKey" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="11sp"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="JWT Secret" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvJwtSecret" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="11sp"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Session Token" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvSessionToken" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ffcc00" android:textSize="10sp"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Admin Username" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvAdminUsername" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="12sp"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Admin Password" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvAdminPassword" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="12sp"/>
-            </LinearLayout>
-        </LinearLayout>
-
-        <!-- ═══ Database Card ═══ -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="🗄️ Database"
-            android:textColor="#8899bb"
-            android:textSize="13sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="#111827"
-            android:padding="16dp"
-            android:layout_marginBottom="12dp">
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Host" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvDbHost" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ffffff" android:textSize="12sp"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="User / Password" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvDbCredentials" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="12sp"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Database" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvDbName" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ffffff" android:textSize="12sp"/>
-            </LinearLayout>
-        </LinearLayout>
-
-        <!-- ═══ Integrations Card ═══ -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="🔌 Integrations"
-            android:textColor="#8899bb"
-            android:textSize="13sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="#111827"
-            android:padding="16dp"
-            android:layout_marginBottom="12dp">
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Google OAuth ID" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvGoogleOAuth" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="11sp"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="10dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Mapbox Token" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvMapboxToken" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="11sp"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Sentry DSN" android:textColor="#556688" android:textSize="12sp"/>
-                <TextView android:id="@+id/tvSentryDsn" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#ff6b6b" android:textSize="11sp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="EXPIRES" android:textColor="#556688" android:textSize="9sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="12/28" android:textColor="#ffffff" android:textSize="12sp"/>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
@@ -518,27 +288,83 @@
             android:layout_marginBottom="20dp">
 
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="16dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="☕ Coffee Shop" android:textColor="#ffffff" android:textSize="13sp"/>
+                android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="16dp">
+                <TextView android:layout_width="32dp" android:layout_height="32dp"
+                    android:text="☕" android:textSize="18sp" android:gravity="center"
+                    android:background="#1a2235" android:layout_marginRight="12dp"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Coffee Shop" android:textColor="#ffffff" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Today, 8:45 AM" android:textColor="#556688" android:textSize="10sp"/>
+                </LinearLayout>
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="-$4.50" android:textColor="#ff6b6b" android:textSize="13sp"/>
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="16dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="💼 Salary Deposit" android:textColor="#ffffff" android:textSize="13sp"/>
+                android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="16dp">
+                <TextView android:layout_width="32dp" android:layout_height="32dp"
+                    android:text="💼" android:textSize="18sp" android:gravity="center"
+                    android:background="#1a2235" android:layout_marginRight="12dp"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Salary Deposit" android:textColor="#ffffff" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Yesterday" android:textColor="#556688" android:textSize="10sp"/>
+                </LinearLayout>
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="+$5,240.00" android:textColor="#00ff88" android:textSize="13sp"/>
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="🛒 Supermarket" android:textColor="#ffffff" android:textSize="13sp"/>
+                android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="16dp">
+                <TextView android:layout_width="32dp" android:layout_height="32dp"
+                    android:text="🛒" android:textSize="18sp" android:gravity="center"
+                    android:background="#1a2235" android:layout_marginRight="12dp"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Supermarket" android:textColor="#ffffff" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="May 1, 2026" android:textColor="#556688" android:textSize="10sp"/>
+                </LinearLayout>
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="-$89.20" android:textColor="#ff6b6b" android:textSize="13sp"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="16dp">
+                <TextView android:layout_width="32dp" android:layout_height="32dp"
+                    android:text="🏠" android:textSize="18sp" android:gravity="center"
+                    android:background="#1a2235" android:layout_marginRight="12dp"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Rent Payment" android:textColor="#ffffff" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Apr 30, 2026" android:textColor="#556688" android:textSize="10sp"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="-$1,200.00" android:textColor="#ff6b6b" android:textSize="13sp"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:layout_width="32dp" android:layout_height="32dp"
+                    android:text="⚡" android:textSize="18sp" android:gravity="center"
+                    android:background="#1a2235" android:layout_marginRight="12dp"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Electric Bill" android:textColor="#ffffff" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Apr 28, 2026" android:textColor="#556688" android:textSize="10sp"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="-$145.00" android:textColor="#ff6b6b" android:textSize="13sp"/>
             </LinearLayout>
         </LinearLayout>
 
