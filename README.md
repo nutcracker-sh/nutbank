@@ -7,15 +7,15 @@
 ![Platform](https://img.shields.io/badge/Platform-Android-3DDC84?logo=android)
 ![Language](https://img.shields.io/badge/Kotlin-1.9-7F52FF?logo=kotlin)
 ![Purpose](https://img.shields.io/badge/Purpose-Security%20Research-red)
-![GitHub stars](https://img.shields.io/github/stars/nutcracker-sh/nutbank?style=social)
-![GitHub issues](https://img.shields.io/github/issues/nutcracker-sh/nutbank)
-![GitHub license](https://img.shields.io/github/license/nutcracker-sh/nutbank)
+[![GitHub Stars](https://img.shields.io/github/stars/nutcracker-sh/nutbank?style=social)](https://github.com/nutcracker-sh/nutbank/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/nutcracker-sh/nutbank)](https://github.com/nutcracker-sh/nutbank/issues)
+[![GitHub License](https://img.shields.io/github/license/nutcracker-sh/nutbank)](https://github.com/nutcracker-sh/nutbank/blob/main/LICENSE)
 ![GitHub last commit](https://img.shields.io/github/last-commit/nutcracker-sh/nutbank)
 ![API](https://img.shields.io/badge/API-26%2B-brightgreen)
 
 ## 📖 About
 
-NutBank is part of [**nutcracker.sh**](https://nutcracker.sh) — an Android security analysis platform. It is a deliberately insecure Android application that simulates a banking app with multiple common vulnerabilities, designed as the **official target application** for nutcracker.sh security testing.
+NutBank is part of [**nutcracker.sh**](https://nutcracker.sh) — an Android security analysis platform. It is a deliberately insecure Android application that simulates a banking app with multiple intentional vulnerabilities and real-world RASP protections.
 
 This app allows security researchers, pentesters, and students to practice identifying and exploiting real-world mobile vulnerabilities in a safe, controlled environment.
 
@@ -59,11 +59,11 @@ This app allows security researchers, pentesters, and students to practice ident
 
 ## 🛡️ RASP Protection
 
-NutBank implements **Runtime Application Self-Protection (RASP)** with multiple layers of defense that aim to resist bypass attempts. These protections serve as a real-world challenge for security researchers using [nutcracker.sh](https://nutcracker.sh).
+NutBank implements **Runtime Application Self-Protection (RASP)** with multiple layers of defense that aim to resist bypass attempts. These protections serve as a real-world challenge for security researchers and mobile app pentesters.
 
 ### Detection Mechanisms
 - 🌱 **Root Detection** — via RootBeer library: `su` binary, root management apps (Magisk, SuperSU), test-keys build, writable system partitions
-- 🐉 **Frida Detection** — port scanning (27042), `/proc/*/cmdline` process inspection, `/proc/self/maps` memory analysis for Frida artifacts (`frida-server`, `frida-agent`, `frida-gadget`, `gum-js-loop`)
+- 🐉 **Frida Detection** — port scanning (27042), `/proc/*/cmdline` process inspection, `/proc/self/maps` memory analysis for Frida artifacts (`frida-server`, `frida-agent`, `frida-gadget`, etc.)
 - 🖥️ **Emulator Detection** — Build fingerprint analysis, QEMU pipe/socket detection, hardware property checks
 - 🐛 **Debugger Detection** — `android.os.Debug.isDebuggerConnected()`, ptrace status via `/proc/self/status`
 - 🔧 **Hooking Framework Detection** — Xposed, Substrate, and LSPOSED module scanning
@@ -77,7 +77,7 @@ When a threat is detected, NutBank can:
 - Use **obfuscated check logic** to hinder static analysis
 - Employ **timing-based anomalies** to detect hooking interference
 
-> 💡 These RASP controls are designed to be **robust but bypassable** — the goal is to provide a realistic training target. Advanced attackers using nutcracker.sh can practice bypassing each protection layer.
+> 💡 These RASP controls are designed to be **robust but bypassable** — the goal is to provide a realistic training target. Advanced attackers using nutcracker.sh can practice bypassing each protection type.
 
 ## 🏗️ Architecture
 
@@ -149,7 +149,7 @@ This app is designed as a companion target for [nutcracker.sh](https://nutcracke
 
 ## ⚖️ Disclaimer
 
-This application is provided for **educational and authorized security testing purposes only**. The authors assume no liability and are not responsible for any misuse or damage caused by this program. Always obtain proper authorization before testing any application.
+This application is provided for **educational and authorized security testing purposes only**. The authors assume no liability and are not responsible for any misuse or damage caused by this project.
 
 ## 👤 Author
 
