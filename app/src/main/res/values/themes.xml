@@ -1,0 +1,12 @@
+<resources>
+    <style name="Theme.NutcrackerVictim" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#4a7aff</item>
+        <item name="colorPrimaryVariant">#2a5adf</item>
+        <item name="colorOnPrimary">#ffffff</item>
+        <item name="android:windowBackground">#0a0f1e</item>
+        <item name="android:statusBarColor">#0a0f1e</item>
+        <item name="android:windowSplashScreenBackground">#ffffff</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_splash</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">#ffffff</item>
+    </style>
+</resources>

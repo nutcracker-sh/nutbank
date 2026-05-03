@@ -1,6 +1,5 @@
 <img width="1536" height="1024" alt="D82A3018-6034-4B56-A12B-CDEC14104903" src="https://github.com/user-attachments/assets/32069080-39d4-4170-b3ce-34ea61880359" />
 
-
 # 🥜 NutBank — Intentionally Vulnerable Android App
 
 > ⚠️ **WARNING**: This application is intentionally vulnerable. It is designed **exclusively** for security research, education, and testing purposes. **Do NOT use in production environments.**

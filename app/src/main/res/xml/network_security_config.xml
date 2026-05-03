@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- VULNERABILITY: cleartextTrafficPermitted="true" allows HTTP traffic -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <!-- VULNERABILITY: Trust user-added CAs — allows MITM with custom cert -->
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+
+    <!-- VULNERABILITY: No certificate pinning, cleartext allowed for API domains -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">api.nutbank-demo.internal</domain>
+        <domain includeSubdomains="true">nutbank-demo-prod.firebaseio.com</domain>
+        <domain includeSubdomains="true">s3.amazonaws.com</domain>
+    </domain-config>
+</network-security-config>
