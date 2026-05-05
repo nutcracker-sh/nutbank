@@ -30,12 +30,12 @@
             </intent-filter>
         </activity>
 
-        <!-- VULNERABILITY: Exported activity with no permission check -->
+        <!-- VULNERABILITY: Exported activity with no permission check — exposes credit card data -->
         <activity
-            android:name=".AdminActivity"
+            android:name=".CreditCardActivity"
             android:exported="true" />
 
-        <activity android:name=".DashboardActivity" android:exported="false"/>
+        <activity android:name=".DashboardActivity" android:exported="true"/>
 
         <!-- VULNERABILITY: MASVS-AUTH-2 — Biometric auth with weak fallback -->
         <activity

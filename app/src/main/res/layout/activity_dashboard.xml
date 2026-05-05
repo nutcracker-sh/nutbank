@@ -188,18 +188,21 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/btnAboutUs"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="#111827"
-                android:padding="16dp">
+                android:padding="16dp"
+                android:clickable="true"
+                android:focusable="true">
 
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                    android:text="📊" android:textSize="24sp" android:layout_marginBottom="6dp"/>
+                    android:text="ℹ️" android:textSize="24sp" android:layout_marginBottom="6dp"/>
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                    android:text="More" android:textColor="#ffffff" android:textSize="11sp"/>
+                    android:text="About Us" android:textColor="#ffffff" android:textSize="11sp"/>
             </LinearLayout>
         </LinearLayout>
 

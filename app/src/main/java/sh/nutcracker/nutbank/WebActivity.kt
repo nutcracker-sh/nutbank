@@ -88,7 +88,7 @@ class WebActivity : Activity() {
         // An attacker can craft a malicious deep link with XSS payload
         val url = intent.data?.toString()
             ?: intent.getStringExtra("url")
-            ?: "https://nutbank-demo.web.app"
+            ?: "https://nutcracker.sh"
 
         Log.d(TAG, "Loading URL in insecure WebView: $url")
         Log.v(TAG, "Session accessible via JS bridge")

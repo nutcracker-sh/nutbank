@@ -38,6 +38,7 @@ object Secrets {
     const val JWT_SECRET        = "super_secret_jwt_signing_key_nutcracker_demo"
 
     // ── Banking / Account ───────────────────────────────────────
+    const val CARD_PIN          = "1234"
     const val ACCOUNT_NUMBER    = "4821983201"
     const val ROUTING_NUMBER    = "021000021"
     const val ACCOUNT_TOKEN     = "sk_live_FAKE_demo_123"
